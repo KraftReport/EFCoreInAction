@@ -17,3 +17,12 @@ using (var db = new AppDbContext())
             $"{book?.Author?.WebUrl}");
     }
 }
+
+using(var db = new AppDbContext())
+{
+    var webUrl = "https://www.agathachristie.com";
+    var book = db.Books.Include(a => a.Author).Single(b => b.BookId == 5);
+    book.Author.WebUrl = webUrl;
+    db.SaveChanges();
+    Console.WriteLine("book is updated");
+}
