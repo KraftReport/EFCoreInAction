@@ -53,3 +53,5 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 /EFCoreConsole/.vs
+/BookShop/.vs
+/BookShop/wwwroot/lib
